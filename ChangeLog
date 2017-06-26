@@ -1,0 +1,37 @@
+### Thu Aug 12 13:08:40 CEST 2010
+  + pagestyle{plain} added to "lslides" target
+  + subsection in "lslides" are red, not blue
+  - manual page fixed (input parameters)
+
+
+### Sat Apr  9 23:15:18 CEST 2005
+  + version 0.0.11
+  + "lbeamer" target (LaTeX Beamer presentation macro)
+
+
+### Wed Feb  9 23:42:51 CET 2005
+  + version 0.0.10
+  + "lslides" target made more beautifull
+  - another bug in "itemize/enumerate" closing code
+
+
+### Sat Feb  5 13:06:48 CET 2005
+  + version 0.0.9
+  + \usepackage{czech} available for LaTeX ("-upc" parameter)
+  - slide numbering bug fixed
+
+
+### Fri Feb  4 23:22:04 CET 2005
+  + version 0.0.8
+  + LaTeX book export
+  - closing of itemize at the end of the file fixed
+
+
+### November 18 2004
+  + version 0.0.6
+  + initial (working) version
+  + HTML, LaTeX, LaTeX slides (my own modification) Emacs outiner export
+
+
+### October 15 2004
+  + coding started

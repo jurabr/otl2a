@@ -1,0 +1,59 @@
+.TH OTL2A 1 "10 June 2017"
+.SH NAME
+otl2a \- naive TVO to HTML and LaTeX convertor.
+.SH SYNOPSIS
+\fBotl2a\fP [\fIoptions\fP]
+.SH DESCRIPTION
+\fBotl2a\fP converts data in \fIThe Vim Outliner\fP format to \fIHTML\fP and \fILaTeX\fP. Data are readed from the standard input and written to standard output. If no parameter is specified then data are converted to plain text (without formatting symbols).
+.SS Options
+.TP
+\fB-t=format\fP
+Output format. \fBformat\fP can be on of: \fIhtml\fP, \fIlatex\fP, \fIlslides\fP, \fIlbeamer\fP, \fIlbook\fP \fIemacs\fP. The long-style options (\fI--html\fP or \fI--latex\fP or \fI--latex-slides\fP, \fI--latex-beamer\fP, \fI--latex-book\fP or \fI--emacs\fP instead of \fI-t=format\fP) also may work.
+.TP
+\fB-e\fP or \fB--expand-links\fP
+Links (e.g. \fB[link]\fP, \fB[[anchor]]\fP \fB[file.ext]\fP) will be expanded (replaced with format-depedent information).
+If \fIlinks.ext\fP is an image (extension is identical to one of \fIpng, jpg, gif, jpeg, tif, tiff, eps, svg\fP), the proper image tag will be used (\fI<img src=..>\fP for the HTML).
+.TP
+\fB-l\fP or \fB--expand-hlinks\fP
+\fIhttp://...\fP, \fIhttps://...\fP and \fIftp://...\fP will be expanded/replaced with proper hyperlink tags.
+.TP
+\fB-b\fP or \fB--body-only\fP
+The header and the footer (such as \fI<html> <body>\fP and \fI</body> </html>\fP) will \fBnot\fP be written.
+.TP
+\fB-c\fP or \fB--comment-texts\fP
+Plain text data will be written as a comments.
+.TP
+\fB-n\fP or \fB--no-texts\fP
+Plain text data will be written ignored.
+.TP
+\fB-u\fP or \fB--itemize-only\fP or \fB--no-enumerate\fP
+All itemized things (lines that starts with "\fB*\fP" or "\fB-\fP") will be exported as non-numbered items. The default behaviour is to export "\fB-\fP"s as numbered items (\fI<ol>\fP in HTML).
+.TP
+\fB--upc\fP or \fB-upc\fP or \fB--usepackage-czech\fP
+Includes \fI"\\usepackage{czech}"\fP in \fBLaTeX\fP outputs (important
+for CSLaTeX, useless for anybody who don't speak Czech language).
+.TP
+\fB-h\fR
+Help. Do not expect anything usefull!
+.SH FILES
+.TP
+\fBotl2a\fP
+Executable file. Location of file is system-dependent but \fI/usr/local/bin/otl2a\fP is the most common.
+.TP 
+Manual page (this file).
+.SH COMPATIBILITY
+Source code has been written in a plain \fBISO C\fP programming language ("C89") without any extension. It should work everywhere.
+.SH LICENSE
+The code is released under the GNU General Public Licence.
+.SH AUTHOR
+Jiri Brozovsky <jirka@penguin.cz>
+.SH "SEE ALSO"
+vim(1)
+.SH BUGS
+.TP
+There are tons of bugs. Really!
+.SH "TO DO"
+.TP
+More output formats. Any ideas?
+.SH VERSION
+0.0.6
